@@ -55,7 +55,6 @@ main section {
   border-radius: 10px;
   margin: 0 0 20px 0;
   padding: 20px;
-  width: 60%;
   p {
     color: var(--gray);
     line-height: 1.5;
@@ -377,26 +376,6 @@ ol li:not(.footnotes)::before {
   padding-bottom: 2rem;
 }
 
-@media (max-width: 400px) {
-  .footer {
-    column-count: 1;
-  }
-
-  .image-grid {
-    column-count: 1;
-  }
-
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-  td {
-    padding: 0;
-    text-align: left;
-  }
-  tr {
-    padding: 10px 0 10px 0;
-  }
-}
 
 .infoboxes {
   display: grid;
@@ -436,5 +415,39 @@ ol li:not(.footnotes)::before {
               url('data:image/svg+xml;base64,ICAgICAgICAgIDxzdmcgd2lkdGg9IjE2OSIgaGVpZ2h0PSI2NzMiIHZpZXdCb3g9IjAgMCAxNjkgNjczIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICAgICAgICA8cGF0aCBkPSJNMCAzMzYuNDg0QzkyLjkxNzUgMzM2LjQ4NCAxNjguMjQyIDI2MS4xNiAxNjguMjQyIDE2OC4yNDJDMTY4LjI0MiA3NS4zMjQ1IDkyLjkxNzUgMCAwIDBWMzM2LjQ4NFoiIGZpbGw9IiM2NTg3YmY1NSI+PC9wYXRoPgogICAgICAgICAgPC9zdmc+Cg==') no-repeat left top;
   background-size: contain, auto;
   z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    column-count: 1;
+  }
+
+  .image-grid {
+    column-count: 1;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  td {
+    padding: 0;
+    text-align: left;
+  }
+  tr {
+    padding: 10px 0 10px 0;
+  }
+
+  .art::before {
+    background-size: auto, auto;
+  }
+  .art2::after {
+    background-size: 20%, 20%;
+  }
+
+  .infoboxes {
+    .left, .right {
+      width: 100%;
+    }
+  }
 }
 
