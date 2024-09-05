@@ -161,11 +161,6 @@ a:hover {
     border-bottom: 1.5px solid var(--gray);
 }
 
-.footer {
-    column-count: 2;
-    column-gap: 12px;
-}
-
 body {
     padding: 0 13px;
     margin: 40px auto;
@@ -315,10 +310,6 @@ hr {
     max-width: 100%;
     text-align: left;
     margin: 20px 0 20px 0;
-}
-
-footer {
-    padding-top: 30px;
 }
 
 blockquote {
@@ -482,10 +473,6 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-    .footer {
-        column-count: 1;
-    }
-
     .image-grid {
         column-count: 1;
     }
@@ -526,4 +513,28 @@ h4 {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links ul li a {
+    color: var(--dark);
+}
+
+.copyright {
+    margin-top: 20px;
+    color: var(--gray);
 }
