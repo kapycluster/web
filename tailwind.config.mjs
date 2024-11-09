@@ -10,6 +10,18 @@ export default {
         serif: ['Crimson Text', ...defaultTheme.fontFamily.serif],
         mono: ['Geist Mono', ...defaultTheme.fontFamily.mono],
       },
+      height: {
+        headerHeight: 'var(--header-height)',
+      },
+      colors: {
+        base: 'var(--base)',
+        brand: 'var(--brand)',
+        onBrand: 'var(--on-brand)',
+        highlight: 'var(--highlight)',
+        surface: 'var(--surface)',
+        text: 'var(--text)',
+        subtle: 'var(--subtle)',
+      },
     },
   },
   plugins: [],
