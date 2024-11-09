@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Vendor agnostic",
+    "description": "Seamlessly integrate nodes from any cloud provider, breaking free from traditional vendor lock-in. Cloud VMs? Check. Bare metal? Check. Raspberry Pi at home? Check"
+  },
+  {
+    "title": "Cost-Effective Scaling",
+    "description": "Save up to 50% compared to most managed Kubernetes services, with highly affordable HA control planes that scale with your needs."
+  },
+  {
+    "title": "Full Control & Flexibility",
+    "description": "Multi-cloud support, access control, and RBAC management—all in one place."
+  },
+  {
+    "title": "Hassle-Free Cluster Upgrades",
+    "description": "Automated cluster upgrades and backups to keep your systems running smoothly"
+  }
+]

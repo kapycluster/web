@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<footer class="bg-zinc-50 h-[250px] text-white">
+  <div
+    class="md:grid-cols-2 mx-auto max-w-5xl px-1 py-10 mx-auto max-w-lg md:max-w-5xl"
+  >
+    <div class="flex flex-col items-end justify-start">
+      <img class="h-10" src="/logo.svg" />
+      <p class="text-[--subtle] font-sans">
+        <small>Deploy globally from a single Kubernetes cluster</small>
+      </p>
+      <ul class="flex gap-3 justify-self-end items-end text-sm">
+        <li class="py-1">
+          <a
+            href="mailto:anirudh@kapycluster.com"
+            class="flex gap-1 items-center hover:text-[--text] transition-colors text-[--subtle] brightness-70 hover:brightness-100 hover:underline hover:underline-offset-4 hover:scale-[1.1]"
+          >
+            <Icon name="tabler:mail" class="h-5 w-5" />
+          </a>
+        </li>
+        <li class="py-1">
+          <a
+            href="https://github.com/kapycluster"
+            class="flex gap-1 items-center hover:text-[--text] transition-colors text-[--subtle] brightness-70 hover:brightness-100 hover:underline hover:underline-offset-4 hover:scale-[1.1]"
+          >
+            <Icon name="tabler:brand-github" class="h-5 w-5" />
+          </a>
+        </li>
+        <li class="py-1">
+          <a
+            href="https://x.com/kapycluster"
+            class="flex gap-1 items-center hover:text-[--text] transition-colors text-[--subtle] brightness-70 hover:brightness-100 hover:underline hover:underline-offset-4 hover:scale-[1.1]"
+          >
+            <Icon name="tabler:brand-x" class="h-5 w-5" />
+          </a>
+        </li>
+        <li class="py-1">
+          <a
+            href="https://bsky.app/profile/kapycluster.com"
+            class="flex gap-1 items-center hover:text-[--text] transition-colors text-[--subtle] brightness-70 hover:brightness-100 hover:underline hover:underline-offset-4 hover:scale-[1.1]"
+          >
+            <Icon name="tabler:brand-bluesky" class="h-5 w-5" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

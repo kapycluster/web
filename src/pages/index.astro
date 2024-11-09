@@ -1,0 +1,178 @@
+---
+import { Icon } from 'astro-icon/components'
+import BaseLayout from '../layouts/Base.astro'
+import ControlPlaneGraphic from '../svgs/control-plane.svg?raw'
+import PaperGrid from '../components/PaperGrid.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<BaseLayout>
+  <body un-cloak>
+    <div class="font-sans p-2 pb-0 md:pb-0 md:p-4 bg-[--base] text-[--text]">
+      <header
+        id="header"
+        class="sticky top-0 bg-white/30 z-10 backdrop-blur-sm max-w-5xl mx-auto px-2 flex w-[100vw] items-center justify-between"
+      >
+        <div class="flex flex-1 justify-start">
+          <img src="/logo.svg" class="hidden sm:block h-[42px]" />
+          <img src="/logo-icon.svg" class="block sm:hidden h-[42px]" />
+        </div>
+        <div class="flex flex-1 justify-end">
+          <div
+            id="navbar"
+            class="h-12 w-full overflow-hidden text-[--on-brand] flex mt-4 sm:mt-0 items-center justify-center sm:justify-end"
+          >
+            <nav class="">
+              <ul class="flex gap-4 items-center h-full">
+                <li>
+                  <a
+                    href="#"
+                    class="font-normal transition transition-colors rounded-[9999px] px-4 py-2 hover:text-[--highlight]"
+                    >Home</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="https://tally.so/r/me2Q8E"
+                    class="group select-none text-sm tracking-tight rounded flex gap-2 items-center justify-center text-nowrap transition-colors duration-75 fv-style disabled:opacity-50 disabled:cursor-not-allowed bg-[--highlight] text-white [box-shadow:var(--brand)_0_-2px_0_0_inset,_hsl(219,_93%,_95%)_0_1px_3px_0] hover:bg-[--highlight] active:[box-shadow:none] hover:[box-shadow:none] px-2.5 h-8"
+                    >Waitlist
+                    <div class="inline-flex items-center w-6">
+                      <span
+                        class="inline-block ml-0 transition-all transition group-hover:ml-2"
+                      >
+                        <Icon name="ph:arrow-right" />
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section
+        class="px-2 mx-auto mt-10 max-w-5xl text-gray-600 animate-kids fade-in-y body-font"
+        id="hero"
+      >
+        <div class="flex flex-col items-center w-full md:flex-row">
+          <div class="flex flex-col gap-2 flex-1 items-center mb-16 text-left">
+            <hgroup>
+              <h1
+                class="mb-4 font-sans text-3xl font-light text-gray-900 sm:text-4xl"
+              >
+                Deploy <em class="text-[--highlight]">globally</em> from a single
+                Kubernetes cluster
+              </h1>
+              <h2 class="text-[--subtle]">
+                Run your apps all over the world using the familiar interface of
+                Kubernetes.
+              </h2>
+            </hgroup>
+            <div class="flex h-16 justify-start items-start my-5 w-full">
+              <a
+                href="https://tally.so/r/me2Q8E"
+                class="cursor-pointer gap-2 inline-flex transition-all group bg-[--highlight] text-white px-6 py-2 rounded-lg border-[--brand] border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+                >Join the Waitlist
+                <div class="inline-flex items-center w-6">
+                  <span
+                    class="inline-block ml-0 transition-all transition group-hover:ml-2"
+                  >
+                    <Icon name="ph:arrow-right" />
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-[2]">
+            <div class="relative w-[100vw] md:w-full">
+              <Fragment set:html={ControlPlaneGraphic} />
+              <PaperGrid />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="feature-list"
+        class="pt-10 mx-auto mt-20 max-w-lg text-white border-t border-purple-100 animate-kids fade-in-y my-30 md:max-w-5xl"
+      >
+        <h1 class="text-[--text] text-3xl px-4 pb-12 font-light text-left w-full">
+          Features
+        </h1>
+        <div class="flex flex-col gap-16">
+          <div
+            class="flex flex-wrap gap-4 justify-center items-start py-2 w-full md:flex-nowrap md:pb-8"
+          >
+            <div
+              class="flex relative justify-center p-4 w-full rounded-sm md:w-3/6"
+            >
+              <img class="w-72" src="/serverless.png" alt="" />
+              <PaperGrid />
+            </div>
+            <div class="w-full md:w-3/6 text-[--text]">
+              <p class="px-3 mb-2 text-xl font-light">
+                Run your pods serverlessly
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <p class="px-3 py-1 max-w-max font-normal leading-normal text-[--subtle]">
+                  When you create a cluster, you can automatically start
+                  deploying your workloads onto our Kapy Magic Node. No infra,
+                  no ops, and pay only for the resources your pods consume.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-wrap gap-4 justify-center items-start py-2 w-full md:flex-nowrap md:py-8"
+          >
+            <div class="w-full order-2 md:order-1 md:w-3/6 text-[--text]">
+              <p class="px-3 mb-2 text-xl font-light">
+                Deploy to your region (or regions!) of choice with a single line
+              </p>
+              <div class="flex flex-wrap gap-2 text-[--subtle]">
+                <p class="px-3 py-1 max-w-max leading-normal font-normal">
+                  Use the
+                  <code class="px-1 py-1 font-mono bg-gray-50 rounded-sm"
+                    >region.kapy.sh</code
+                  >
+                  annotation to schedule your workloads in your regions of choice.
+                  Multi-region Kubernetes has never been easier.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex relative order-1 justify-center p-4 w-full rounded-sm md:order-2 md:w-3/6"
+            >
+              <img class="w-full h-full" src="/annotate.png" alt="" />
+              <PaperGrid />
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap gap-4 justify-center items-start py-2 w-full md:flex-nowrap md:py-8"
+          >
+            <div
+              class="flex relative justify-center p-4 w-full rounded-sm md:w-3/6"
+            >
+              <img class="w-[23.32rem]" src="/bring-your-own.png" alt="" />
+              <PaperGrid />
+            </div>
+            <div class="w-full md:w-3/6 text-[--text]">
+              <p class="px-3 mb-2 text-xl font-light">Bring your own nodes</p>
+              <div class="flex flex-wrap gap-2">
+                <p class="px-3 py-1 max-w-max font-normal leading-normal text-[--subtle]">
+                  Have applications with special requirements? No worries! You
+                  can join nodes from any cloud (heck, even your home Raspberry
+                  Pi) to our Control Plane with ease using our Kapy Agent or
+                  vanilla K3s. Build your cluster as you see fit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <Footer />
+  </body>
+</BaseLayout>

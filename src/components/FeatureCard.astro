@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components'
+const { icon, title = 'Hello World', description = 'Lipsum' } = Astro.props
+---
+
+<style>
+  .placeholder {
+    background-color: var(--bg);
+    opacity: 1;
+    background-image: radial-gradient(var(--fg) 0.45px, var(--bg) 0.45px);
+    background-size: 9px 9px;
+  }
+</style>
+<div class="flex py-4 w-full">
+  <div
+    class="inline-flex flex-shrink-0 justify-center items-center mb-4 w-12 h-12 rounded-full"
+  >
+    <div class="w-10 h-10 rounded placeholder"></div>
+  </div>
+  <div class="flex-grow pl-6">
+    <h2 class="text-[--fg] text-2xl font-normal mb-2">{title}</h2>
+    <p class="font-sans text-base leading-relaxed">
+      {description}
+    </p>
+    <a class="mt-3 text-[--accent-1] inline-flex items-center" href=""
+      >Learn More
+      <Icon class="ml-2" name={icon || 'ph:anchor-simple'} />
+    </a>
+  </div>
+</div>
