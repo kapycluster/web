@@ -18,7 +18,12 @@ export function onRequest({ request }) {
     });
   }
 
-  return new Response(null, {
+  return new Response(`<!DOCTYPE html>
+  <html>
+  <body>
+    <p>Four oh four!</p>
+  </body>
+  </html>`, {
     status: 404,
   });
 }
