@@ -19,5 +19,16 @@ export function onRequest({ request }) {
     )
   }
 
-  return Response.redirect('/', 302)
+  return new Response(
+    `
+    <html>
+    <body><p>Four oh four!</p></body>
+    </html>`,
+    {
+      status: 404,
+      headers: {
+        'content-type': 'text/html;charset=UTF-8',
+      },
+    }
+  )
 }
