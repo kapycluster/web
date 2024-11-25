@@ -1,8 +1,7 @@
 import type { APIRoute } from 'astro'
 
-export const GET: APIRoute = ({ params, request }) => {
-  const sp = new URL(request.url).searchParams
-  const isGoGet = sp.get('go-get') == '1'
+export const GET: APIRoute = ctx => {
+  const isGoGet = ctx.url.searchParams.get('go-get') == '1'
   if (!isGoGet) {
     return new Response(`Page Not found`, {
       status: 404,
