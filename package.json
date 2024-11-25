@@ -6,11 +6,12 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview",
+    "preview": "wrangler pages dev ./dist",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^11.2.0",
     "@astrojs/preact": "^3.5.3",
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource/crimson-text": "^5.1.0",
@@ -29,7 +30,8 @@
     "@barelyhuman/prettier-config": "^2.0.2",
     "@iconify-json/ph": "^1.2.1",
     "@iconify-json/tabler": "^1.2.7",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "wrangler": "^3.90.0"
   },
   "prettier": "@barelyhuman/prettier-config"
 }

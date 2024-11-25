@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import icon from 'astro-icon'
 import preact from '@astrojs/preact'
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
       compat: true,
     }),
   ],
+
   vite: {
     resolve: {
       alias: {
@@ -22,4 +24,6 @@ export default defineConfig({
       },
     },
   },
+  output: 'hybrid',
+  adapter: cloudflare(),
 })
