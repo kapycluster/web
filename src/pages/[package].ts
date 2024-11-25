@@ -20,3 +20,5 @@ export const GET: APIRoute = ctx => {
     }
   )
 }
+
+export const prerender = false
